@@ -236,13 +236,21 @@ img {
 }
 
 /*==================== HOME ====================*/
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .home__container {
   gap: 1rem;
 }
 
 .home__content {
   grid-template-columns: 0.5fr 3fr;
-  padding-top: 3.5rem;
+  /* padding-top: 3.5rem; */
   align-items: center;
 }
 
@@ -287,6 +295,10 @@ img {
 
 .home__description {
   margin-bottom: var(--mb-2);
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
 }
 
 /*==================== BUTTONS ====================*/
@@ -586,16 +598,20 @@ img {
 }
 
 .footer__bg {
-  background-color: var(--title-color);
+  background-color: #d3d3d3;
   padding: 2rem 0 3rem;
 }
 
 .footer__social {
   font-size: var(--h1-font-size);
-  color: var(--input-color);
+  color: black;
   font-weight: var(--font-semi-bold);
   text-align: center;
   margin-right: 7px;
+}
+
+.footer__social a {
+  margin: auto 1rem;
 }
 
 .footer__social:hover {
@@ -728,7 +744,7 @@ img {
       row-gap: 5rem;
     }
     .home__content {
-      padding-top: 5.5rem;
+      /* padding-top: 5.5rem; */
       column-gap: 2rem;
     }
     .home__blob {
@@ -816,4 +832,17 @@ img {
       padding: 1rem;
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+.flex {
+  flex-direction: column;
+}
+.home__description {
+  margin-right: 0;
+}
+.home__data {
+  align-items: center;
+  text-align: center;
+}
 }
